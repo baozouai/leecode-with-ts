@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:39:32
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 14:54:20
+ * @LastEditTime: 2020-08-18 15:06:37
  */
 /**
  * example1:
@@ -20,11 +20,10 @@
  * @return {string}  prefix 最长公共前缀
  */
 function longgestCommonPrefix(strArr) {
-    let prefix = '';
     if (strArr.length === 0)
-        return prefix;
+        return '';
     // 先将最长公共前缀赋值为第一个
-    prefix = strArr[0];
+    let prefix = strArr[0];
     // 从第二个开始遍历
     let i = 1;
     while (i < strArr.length) {
