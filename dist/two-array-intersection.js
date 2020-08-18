@@ -4,15 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:35:26
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 09:21:39
- */
-/**
- * example1:
- *   输入: nums1 = [1,2,2,1], nums2 = [2,2]
- *   输出: [2,2]
- * example2:
- *   输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
- *   输出: [4,9]
+ * @LastEditTime: 2020-08-18 11:28:09
  */
 function intersect(nums1 = [], nums2 = []) {
     const map = {};

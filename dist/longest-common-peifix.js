@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:39:32
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 09:04:43
+ * @LastEditTime: 2020-08-18 14:54:20
  */
 /**
  * example1:
@@ -14,43 +14,33 @@
  *   输入: ["dog","racecar","car"]
  *   输出: ""
  */
-//  function intersect(nums1 = [], nums2 = []) {
-//   const map = {};
-//   nums1.forEach(value => {
-//     if (value in map) {
-//       map[value] += 1;
-//     } else {
-//       map[value] = 1;
-//     }
-//   })
-//   let k = 0;
-//   nums2.forEach(value => {
-//     if (map[value] > 0) {
-//       map[value] -= 1;
-//       nums2[k++] = value;
-//     }
-//   })
-//   console.log(nums2)
-//   return nums2.slice(0, k);
-// }
-// /**
-//  * @description: 排序后再求交集
-//  * @param {array} nums1 数组1
-//  * @param {array} nums2 数组2
-//  * @return {array} nums1.slice(0, k) 交集
-//  */
-// function sortIntersect(nums1 = [], nums2 = []) {
-//   nums1.sort((a, b) => a - b);
-//   nums2.sort((a, b) => a - b);
-//   let i = j = k = 0;
-//   while (i < nums1.length && j < nums2.length) {
-//     if (nums1[i] === nums2[j]) {
-//       nums1[k++] = nums1[i++];
-//       ++j;
-//     } else {
-//       nums1[i] > nums2[j] ? ++j: ++i;
-//     }
-//   }
-//   return nums1.slice(0, k);
-// }
-// console.log(sortIntersect([9,4,9,8,4,1], [5, 4,1,9,]));
+/**
+ * @description:
+ * @param {string[]}  strArr 字符串数组
+ * @return {string}  prefix 最长公共前缀
+ */
+function longgestCommonPrefix(strArr) {
+    let prefix = '';
+    if (strArr.length === 0)
+        return prefix;
+    // 先将最长公共前缀赋值为第一个
+    prefix = strArr[0];
+    // 从第二个开始遍历
+    let i = 1;
+    while (i < strArr.length) {
+        // 第i个如果不包含该前缀，则将前缀的末尾-1
+        while (!strArr[i].includes(prefix)) {
+            prefix = prefix.slice(0, prefix.length - 1);
+            // 每次-1后如果是空字符串，则直接返回
+            if (prefix === '') {
+                return prefix;
+            }
+        }
+        // 如果包含，则指针指向下一个
+        ++i;
+    }
+    return prefix;
+}
+;
+console.log(longgestCommonPrefix(["flower", "flow", "flight"]));
+console.log(longgestCommonPrefix(["dog", "racecar", "car"]));
