@@ -1,0 +1,28 @@
+{
+  "name": "leecode-with-ts",
+  "version": "1.0.0",
+  "description": "使用ts刷leecode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build:w": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/baozouai/leecode-with-ts.git"
+  },
+  "keywords": [
+    "ts",
+    "leecode"
+  ],
+  "author": "baozouai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/baozouai/leecode-with-ts/issues"
+  },
+  "homepage": "https://github.com/baozouai/leecode-with-ts#readme",
+  "dependencies": {
+    "typescript": "^3.9.7"
+  }
+}
