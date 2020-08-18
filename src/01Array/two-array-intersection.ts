@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:35:26
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 09:21:39
+ * @LastEditTime: 2020-08-18 11:28:09
  */
 
 /**
@@ -14,10 +14,12 @@
  *   输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
  *   输出: [4,9]
  */
-
-
-function intersect(nums1: number[] = [], nums2: number[] = []): number[] {
-  const map: { [key: number]: number } = {};
+interface mapType {
+  [key: number]: number
+}
+type arrayType = number[];
+function intersect(nums1: arrayType = [], nums2: arrayType = []): arrayType {
+  const map: mapType = {};
   nums1.forEach((value: number) => {
     if (value in map) {
       map[value] += 1;
@@ -40,10 +42,10 @@ function intersect(nums1: number[] = [], nums2: number[] = []): number[] {
  * @param {array} nums2 数组2
  * @return {array} nums1.slice(0, k) 交集
  */
-function sortIntersect(nums1: number[] = [], nums2:number[] = []):number[] {
-  nums1.sort((a:number, b:number):number => a - b);
-  nums2.sort((a:number, b:number):number => a - b);
-  let i = 0,  j =0,  k = 0;
+function sortIntersect(nums1: number[] = [], nums2: number[] = []): number[] {
+  nums1.sort((a: number, b: number): number => a - b);
+  nums2.sort((a: number, b: number): number => a - b);
+  let i = 0, j = 0, k = 0;
 
   while (i < nums1.length && j < nums2.length) {
     if (nums1[i] === nums2[j]) {
