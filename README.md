@@ -1,4 +1,3 @@
-
 # 使用ts刷leecode
 
 ## 数组
@@ -9,4 +8,5 @@
 |    [最长公共前缀](./src/01Array/longest-common-peifix.ts)    |  ⭐️   |
 | [买卖股票最佳时机II](./src/01Array/best-time-to-buy-and-sell-stock-ii.ts) |  ⭐️   |
 | [翻转数组](./src/01Array/rotate-array.ts) |  ⭐️   |
+| [加一](./src/01Array/plus-one.ts) |  ⭐️   |
 
