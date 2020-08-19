@@ -3,17 +3,25 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:35:26
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 18:07:28
+ * @LastEditTime: 2020-08-19 09:01:59
  */
 
 /**
- * example1: 
- *   输入: nums1 = [1,2,2,1], nums2 = [2,2]
- *   输出: [2,2]
- * example2:
- *   输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
- *   输出: [4,9]
- */
+ *   示例 1:
+ *    输入：nums1 = [1,2,2,1], nums2 = [2,2]
+ *    输出：[2,2]
+ * 
+ *   示例 2:
+ *    输入：nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+ *    输出：[4,9]
+ * 
+ *    说明：
+ *      输出结果中每个元素出现的次数，应与元素在两个数组中出现次数的最小值一致。
+ *      我们可以不考虑输出结果的顺序。
+ * 
+ *    来源：力扣（LeetCode）
+ *    链接：https://leetcode-cn.com/problems/intersection-of-two-arrays-ii
+*/
 interface mapType {
   [key: number]: number
 }

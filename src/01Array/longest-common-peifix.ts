@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:39:32
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-18 15:06:37
+ * @LastEditTime: 2020-08-19 09:16:02
  */
 
 /**
@@ -13,6 +13,8 @@
  * example2:
  *   输入: ["dog","racecar","car"]
  *   输出: ""
+ *  说明:
+ *   所有输入只包含小写字母 a-z
  */
 
 /**
@@ -29,7 +31,7 @@ function longgestCommonPrefix(strArr: string[]): string {
   let i = 1;
   while (i < strArr.length) {
     // 第i个如果不包含该前缀，则将前缀的末尾-1
-    while (!strArr[i].includes(prefix)) {
+    while (strArr[i].indexOf(prefix)) {
       prefix = prefix.slice(0, prefix.length - 1);
       // 每次-1后如果是空字符串，则直接返回
       if (prefix === '') {
@@ -44,3 +46,4 @@ function longgestCommonPrefix(strArr: string[]): string {
 console.log(longgestCommonPrefix(["flower", "flow", "flight"]));
 
 console.log(longgestCommonPrefix(["dog", "racecar", "car"]))
+console.log(longgestCommonPrefix(["c","acc","ccc"]))
