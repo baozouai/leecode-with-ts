@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-19 14:47:04
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-19 15:13:47
+ * @LastEditTime: 2020-08-19 15:49:07
  */
 
 /**
@@ -23,8 +23,8 @@
  *   向右旋转 2 步: [3,99,-1,-100]
  *  说明:
  *   所有输入只包含小写字母 a-z
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/rotate-array
+ *  来源：力扣（LeetCode）
+ *  链接：https://leetcode-cn.com/problems/rotate-array
  */
 
 /**
@@ -42,11 +42,8 @@ function reverse(nums: number[], start: number = 0, end: number = nums.length - 
 };
 function rotate(nums: number[], k: number): void {
   reverse(nums);
-  console.log(nums)
   reverse(nums, 0, k % nums.length - 1);
-  console.log(nums)
   reverse(nums, k % nums.length);
-  console.log(nums)
 }
 rotate([1,2,3,4,5,6,7], 3);
 
