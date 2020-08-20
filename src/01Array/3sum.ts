@@ -1,32 +1,32 @@
 /*
  * @Description: 
- *     给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
- *     最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
- *     你可以假设除了整数 0 之外，这个整数不会以零开头。
+ *     给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有满足条件且不重复的三元组。
+ *     注意：答案中不可以包含重复的三元组。
  * @Author: Moriaty
- * @Date: 2020-08-20 08:18:04
+ * @Date: 2020-08-20 09:06:06
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-20 09:23:54
+ * @LastEditTime: 2020-08-20 09:30:39
  */
-
 
 /**
  * 示例 1:
  *
- *    给定 nums = [2, 7, 11, 15], target = 9
- *
- *    因为 nums[0] + nums[1] = 2 + 7 = 9
- *    所以返回 [0, 1]
- *    
- *    来源：力扣（LeetCode）
- *    链接：https://leetcode-cn.com/problems/two-sum
+ *    给定数组 nums = [-1, 0, 1, 2, -1, -4]，
+ *      
+ *      满足要求的三元组集合为：
+ *      [
+ *        [-1, 0, 1],
+ *        [-1, -1, 2]
+ *      ]
+ *      
+ *  来源：力扣（LeetCode）
+ *  链接：https://leetcode-cn.com/problems/3sum
  */
 
 /**
- * @description: 给定一个整数数组 nums 和一个目标值 target，找出和为目标值的那 两个 整数，并返回他们的数组下标
+ * @description: 包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组
  * @param {number[]}  nums 待查找的整数数组 nums
- * @param {number}  target 目标值 
- * @return {number[]}  和为目标值的两个整数的数组下标
+ * @return {number[][]} targetArr 所有满足条件且不重复的三元组
  */
 function threeSum(nums: number[]): number[][] {
     let targetArr: number[][] = [];
