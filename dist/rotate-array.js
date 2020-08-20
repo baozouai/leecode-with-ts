@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-19 14:47:04
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-19 15:13:58
+ * @LastEditTime: 2020-08-19 15:49:07
  */
 /**
  * example1:
@@ -23,8 +23,8 @@
  *   向右旋转 2 步: [3,99,-1,-100]
  *  说明:
  *   所有输入只包含小写字母 a-z
-来源：力扣（LeetCode）
-链接：https://leetcode-cn.com/problems/rotate-array
+ *  来源：力扣（LeetCode）
+ *  链接：https://leetcode-cn.com/problems/rotate-array
  */
 /**
  * @description: 翻转数组
