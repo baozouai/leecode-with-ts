@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-21 23:46:34
+ * @LastEditTime: 2020-08-23 09:06:44
 -->
 # 使用ts刷leecode
 
@@ -20,3 +20,8 @@
 | [三数之和为0（15）](./src/01Array/3sum.ts) |  ⭐️⭐️   |
 | [Z 字形变换（6）](./src/01Array/zigzag-conversion.ts) |  ⭐️⭐️   |
 
+## 链表
+
+|                             标题                             | 难度 |
+| :----------------------------------------------------------: | :--: |
+|   [删除链表的倒数第N个节点（19）](./src/02LinkList/remove-nth-node-from-end-of-list.ts)    |  ⭐️⭐️   |
