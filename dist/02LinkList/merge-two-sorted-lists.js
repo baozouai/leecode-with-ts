@@ -1,11 +1,10 @@
 "use strict";
 /*
  * @Description: 合并两个有序链表
- *              将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  * @Author: Moriaty
  * @Date: 2020-08-24 19:29:06
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-24 19:30:56
+ * @LastEditTime: 2020-08-24 20:13:05
  */
 /**
  * 示例 1:
@@ -26,6 +25,12 @@
  *         this.next = (next===undefined ? null : next)
  *     }
  * }
+ */
+/**
+ * @description: 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+ * @param { ListNode | null} l1  链表1
+ * @param { ListNode | null} l2 链表2
+ * @return { ListNode | null} 有序链表
  */
 function mergeTwoLists(l1, l2) {
     let preHead = new ListNode();
