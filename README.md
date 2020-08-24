@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-23 09:06:44
+ * @LastEditTime: 2020-08-24 19:31:55
 -->
 # 使用ts刷leecode
 
@@ -25,3 +25,4 @@
 |                             标题                             | 难度 |
 | :----------------------------------------------------------: | :--: |
 |   [删除链表的倒数第N个节点（19）](./src/02LinkList/remove-nth-node-from-end-of-list.ts)    |  ⭐️⭐️   |
+|   [合并两个有序链表（21）](./src/02LinkList/remove-nth-node-from-end-of-list.ts)    |  ⭐️   |
