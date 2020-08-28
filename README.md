@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: Moriaty
- * @Date: 2020-08-18 09:22:14
- * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-27 08:48:08
--->
 # 使用ts刷leecode
 
 ## 数组
@@ -34,4 +27,4 @@
 |                             标题                             | 难度 |
 | :----------------------------------------------------------: | :--: |
 |   [爬楼梯（70）](./src/03dynamic-programming/climbing-stairs.ts)    |  ⭐️   |
-|   [合并两个有序链表（21）](./src/02LinkList/merge-two-sorted-lists.ts)    |  ⭐️   |
+|   [合并两个有序链表（53）](./src/03dynamic-programming/maximum-subarray.ts)    |  ⭐️   |
