@@ -5,7 +5,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-28 08:57:04
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-28 09:00:25
+ * @LastEditTime: 2020-08-31 08:43:34
  */
 /**
  * 输入: [-2,1,-3,4,-1,2,1,-5,4]
@@ -28,8 +28,7 @@ function maxSubArray(nums) {
     for (let i = 1; i < nums.length; ++i) {
         maxSubSumArr.push(Math.max(nums[i], nums[i] + maxSubSumArr[i - 1]));
     }
-    // 从大到小排序
-    maxSubSumArr.sort((x, y) => y - x);
-    return maxSubSumArr[0];
+    // 返回最大子序和
+    return Math.max(...maxSubSumArr);
 }
 ;

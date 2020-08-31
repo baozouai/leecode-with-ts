@@ -28,3 +28,4 @@
 | :----------------------------------------------------------: | :--: |
 |   [爬楼梯（70）](./src/03dynamic-programming/climbing-stairs.ts)    |  ⭐️   |
 |   [合并两个有序链表（53）](./src/03dynamic-programming/maximum-subarray.ts)    |  ⭐️   |
+|   [合并两个有序链表（53）](./src/03dynamic-programming/longest-increasing-subsequence.ts)    |  ⭐️⭐️   |
