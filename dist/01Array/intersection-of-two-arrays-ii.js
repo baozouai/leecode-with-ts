@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:35:26
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-19 09:01:59
+ * @LastEditTime: 2020-08-31 22:12:57
  */
 function intersect(nums1 = [], nums2 = []) {
     const intersectionArr = [];

@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-31 13:31:02
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 13:42:05
+ * @LastEditTime: 2020-08-31 15:08:38
  */
 /**
  * 给定三角形：
@@ -27,15 +27,22 @@
  * @return {number} 三角形最小路径和
  */
 function minimumTotal(triangle) {
-    // 1.如果是空数组则返回0
-    // 2.如果数组长度为1，则返回第一个元素
-    if ([0, 1].indexOf(triangle.length) !== -1) {
-        return 0 || triangle[0][0];
+    // 获取行数
+    const rows = triangle.length;
+    switch (rows) {
+        // 1.如果是空数组则返回0
+        case 0:
+            return 0;
+        // 2.如果数组长度为1，则返回第一个元素
+        case 1:
+            return triangle[0][0];
+        default:
+            break;
     }
     // 创建动态数组
     let dp = [triangle[0][0],];
     // 从第二行开始遍历
-    for (let i = 1; i < triangle.length; ++i) {
+    for (let i = 1; i < rows; ++i) {
         // 新动态数组置空
         const newDp = [];
         // 遍历第i行的每个元素

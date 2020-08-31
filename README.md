@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 13:30:43
+ * @LastEditTime: 2020-08-31 22:13:31
 -->
 # 使用ts刷leecode
 
@@ -37,3 +37,4 @@
 |   [合并两个有序链表（53）](./src/03dynamic-programming/maximum-subarray.ts)    |  ⭐️   |
 |   [最长上升子序列（300）](./src/03dynamic-programming/longest-increasing-subsequence.ts)    |  ⭐️⭐️   |
 |   [三角形最小路径和（120）](./src/03dynamic-programming/triangle.ts)    |  ⭐️⭐️   |
+|   [最小路径和（64）](./src/03dynamic-programming/minimum-path-sum.ts)    |  ⭐️⭐️   |

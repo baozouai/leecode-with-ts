@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-31 13:31:02
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 13:42:05
+ * @LastEditTime: 2020-08-31 15:08:38
  */
 
 /**
@@ -28,48 +28,55 @@
  * @return {number} 三角形最小路径和
  */
 function minimumTotal(triangle: number[][]): number {
-  // 1.如果是空数组则返回0
-  // 2.如果数组长度为1，则返回第一个元素
-  if ([0, 1].indexOf(triangle.length) !== -1) {
-      return 0 || triangle[0][0];
+  // 获取行数
+  const rows: number = triangle.length;
+  switch (rows) {
+    // 1.如果是空数组则返回0
+    case 0:
+      return 0;
+    // 2.如果数组长度为1，则返回第一个元素
+    case 1:
+      return triangle[0][0];
+    default:
+      break;
   }
   // 创建动态数组
   let dp: number[] = [triangle[0][0],];
   // 从第二行开始遍历
-  for (let i = 1; i < triangle.length; ++i) {
-      // 新动态数组置空
-      const newDp:number[] = [];
-      // 遍历第i行的每个元素
-      for (let j = 0; j < triangle[i].length; ++j) {
-        /**
-         * 第i行每个元素最小路径和为:
-         *  1.j === 0, 只能取上一行第0个元素 即triangle[i][j] + dp[0];
-         *  2.j === i, 只能取上一行第j - 1个元素 即triangle[i][j] + dp[j - 1];
-         *  3.other, triangle[i][j] + min(dp[j - 1], dp[j]);
-         */
-          let preNum;
-          switch (j) {
-              case 0:
-                  preNum = dp[j];
-                  break;
-              case i:
-                  preNum = dp[j - 1];
-                  break;
-              default:
-                  preNum = Math.min(...dp.slice(j - 1, j + 1));
-                  break;
-          }
-          newDp.push(triangle[i][j] + preNum);
+  for (let i = 1; i < rows; ++i) {
+    // 新动态数组置空
+    const newDp: number[] = [];
+    // 遍历第i行的每个元素
+    for (let j = 0; j < triangle[i].length; ++j) {
+      /**
+       * 第i行每个元素最小路径和为:
+       *  1.j === 0, 只能取上一行第0个元素 即triangle[i][j] + dp[0];
+       *  2.j === i, 只能取上一行第j - 1个元素 即triangle[i][j] + dp[j - 1];
+       *  3.other, triangle[i][j] + min(dp[j - 1], dp[j]);
+       */
+      let preNum;
+      switch (j) {
+        case 0:
+          preNum = dp[j];
+          break;
+        case i:
+          preNum = dp[j - 1];
+          break;
+        default:
+          preNum = Math.min(...dp.slice(j - 1, j + 1));
+          break;
       }
-      // 将新的代替旧的
-      dp = [...newDp];
+      newDp.push(triangle[i][j] + preNum);
+    }
+    // 将新的代替旧的
+    dp = [...newDp];
   }
   // 获取最小值
   return Math.min(...dp);
 };
 console.log(minimumTotal([
-           [2],
-          [3,4],
-         [6,5,7],
-        [4,1,8,3]
-      ])); // 11
+  [2],
+  [3, 4],
+  [6, 5, 7],
+  [4, 1, 8, 3]
+])); // 11
