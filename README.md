@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 22:13:31
+ * @LastEditTime: 2020-09-01 14:02:49
 -->
 # 使用ts刷leecode
 
@@ -38,3 +38,4 @@
 |   [最长上升子序列（300）](./src/03dynamic-programming/longest-increasing-subsequence.ts)    |  ⭐️⭐️   |
 |   [三角形最小路径和（120）](./src/03dynamic-programming/triangle.ts)    |  ⭐️⭐️   |
 |   [最小路径和（64）](./src/03dynamic-programming/minimum-path-sum.ts)    |  ⭐️⭐️   |
+|   [打家劫舍（198）](./src/03dynamic-programming/house-robber.ts)    |  ⭐️   |
