@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-01 20:43:39
+ * @LastEditTime: 2020-09-03 08:32:17
 -->
 # 使用ts刷leecode
 
@@ -45,4 +45,5 @@
 |                             标题                             | 难度 |
 | :----------------------------------------------------------: | :--: |
 |   [反转字符串（344）](./src/04String/reverse-string.ts)    |  ⭐️   |
-|   [第一个不重复的字符（387）](./src/03String/firstUniqChar.ts)    |  ⭐️   |
+|   [第一个不重复的字符（387）](./src/04String/firstUniqChar.ts)    |  ⭐️   |
+|   [实现 strStr()（28）](./src/04String/implement-strstr.ts)    |  ⭐️   |
