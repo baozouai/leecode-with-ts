@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-05 20:25:54
+ * @LastEditTime: 2020-09-05 20:49:29
 -->
 # 使用ts刷leecode
 
@@ -49,3 +49,4 @@
 |   [实现 strStr（28）](./src/04String/implement-strstr.ts)    |  ⭐️   |
 |   [验证回文串（125）](./src/04String/valid-palindrome.ts)    |  ⭐️   |
 |   [旋转字符串（796）](./src/04String/rotate-string.ts)    |  ⭐️   |
+|   [最后一个单词的长度（58）](./src/04String/length-of-last-word.ts)    |  ⭐️   |
