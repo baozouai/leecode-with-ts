@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-05 12:18:07
+ * @LastEditTime: 2020-09-05 20:25:54
 -->
 # 使用ts刷leecode
 
@@ -48,3 +48,4 @@
 |   [第一个不重复的字符（387）](./src/04String/firstUniqChar.ts)    |  ⭐️   |
 |   [实现 strStr（28）](./src/04String/implement-strstr.ts)    |  ⭐️   |
 |   [验证回文串（125）](./src/04String/valid-palindrome.ts)    |  ⭐️   |
+|   [旋转字符串（796）](./src/04String/rotate-string.ts)    |  ⭐️   |
