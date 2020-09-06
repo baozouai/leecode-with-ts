@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-06 11:45:46
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-06 11:52:54
+ * @LastEditTime: 2020-09-06 11:57:14
  */
 /**
  * 示例：
@@ -48,24 +48,24 @@ function maxDepth1(root) {
         return 0;
     }
     // 声明一个队列
-    const que = [root];
+    const queue = [root];
     // 高度初始为0
     let height = 0;
-    while (que.length) {
+    while (queue.length) {
         // 获取队列长度
-        const queLength = que.length;
+        const queueLength = queue.length;
         // 高度加1
         ++height;
         // 遍历改队列
-        for (let i = 0; i < queLength; ++i) {
+        for (let i = 0; i < queueLength; ++i) {
             // 取出节点
-            const node = que.shift();
+            const node = queue.shift();
             // 如果有左右子树，则放进队列 先左节点，后右节点
             if (node === null || node === void 0 ? void 0 : node.left) {
-                que.push(node.left);
+                queue.push(node.left);
             }
             if (node === null || node === void 0 ? void 0 : node.right) {
-                que.push(node.right);
+                queue.push(node.right);
             }
         }
     }
