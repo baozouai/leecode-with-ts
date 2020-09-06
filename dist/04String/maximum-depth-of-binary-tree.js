@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-06 11:45:46
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-06 11:57:14
+ * @LastEditTime: 2020-09-06 12:15:38
  */
 /**
  * 示例：
@@ -32,8 +32,8 @@ class TreeNode {
  *               二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
  *               说明: 叶子节点是指没有子节点的节点
  *                maxDepth(root) = max(maxDepth(root.left),maxDepth(root.right)) + 1
- * @param {string[]} s 字符串
- * @return {boolean} 是否是回文串
+ * @param {TreeNode | null} root 根节点
+ * @return {number} 最大深度
  */
 function maxDepth(root) {
     if (!root) {
@@ -48,24 +48,24 @@ function maxDepth1(root) {
         return 0;
     }
     // 声明一个队列
-    const queue = [root];
+    const que = [root];
     // 高度初始为0
     let height = 0;
-    while (queue.length) {
+    while (que.length) {
         // 获取队列长度
-        const queueLength = queue.length;
+        const queLength = que.length;
         // 高度加1
         ++height;
         // 遍历改队列
-        for (let i = 0; i < queueLength; ++i) {
+        for (let i = 0; i < queLength; ++i) {
             // 取出节点
-            const node = queue.shift();
+            const node = que.shift();
             // 如果有左右子树，则放进队列 先左节点，后右节点
             if (node === null || node === void 0 ? void 0 : node.left) {
-                queue.push(node.left);
+                que.push(node.left);
             }
             if (node === null || node === void 0 ? void 0 : node.right) {
-                queue.push(node.right);
+                que.push(node.right);
             }
         }
     }

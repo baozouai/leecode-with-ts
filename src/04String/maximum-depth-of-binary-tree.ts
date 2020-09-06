@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-06 11:45:46
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-06 11:52:54
+ * @LastEditTime: 2020-09-06 12:15:38
  */
 
 /**
@@ -37,8 +37,8 @@ class TreeNode {
  *               二叉树的深度为根节点到最远叶子节点的最长路径上的节点数。
  *               说明: 叶子节点是指没有子节点的节点
  *                maxDepth(root) = max(maxDepth(root.left),maxDepth(root.right)) + 1
- * @param {string[]} s 字符串
- * @return {boolean} 是否是回文串
+ * @param {TreeNode | null} root 根节点
+ * @return {number} 最大深度
  */
 function maxDepth(root: TreeNode | null): number {
   if (!root) {
