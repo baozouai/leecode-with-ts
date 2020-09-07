@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: Moriaty
- * @Date: 2020-08-18 09:22:14
- * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-07 08:41:40
--->
 # 使用ts刷leecode
 
 ## 数组
@@ -60,3 +53,4 @@
 |   [二叉树的最大深度（104）](./src/05binary-tree/maximum-depth-of-binary-tree.ts)    |  ⭐️   |
 |   [二叉树的层序遍历（102）](./src/05binary-tree/binary-tree-level-order-traversal.ts)    |  ⭐️⭐️   |
 |   [验证二叉搜索树（98）](./src/05binary-tree/validate-binary-search-tree.ts)    |  ⭐️⭐️   |
+|   [二叉搜索树中的搜索（700）](./src/05binary-tree/search-in-a-binary-search-tree.ts)    |  ⭐️   |
