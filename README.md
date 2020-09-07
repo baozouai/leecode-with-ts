@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-06 12:09:10
+ * @LastEditTime: 2020-09-07 08:41:40
 -->
 # 使用ts刷leecode
 
@@ -52,3 +52,11 @@
 |   [最后一个单词的长度（58）](./src/04String/length-of-last-word.ts)    |  ⭐️   |
 |   [二叉树的最大深度（104）](./src/04String/maximum-depth-of-binary-tree.ts)    |  ⭐️   |
 |   [二叉树的层序遍历（102）](./src/04String/binary-tree-level-order-traversal.ts)    |  ⭐️   |
+
+## 二叉树
+
+|                             标题                             | 难度 |
+| :----------------------------------------------------------: | :--: |
+|   [二叉树的最大深度（104）](./src/05binary-tree/maximum-depth-of-binary-tree.ts)    |  ⭐️   |
+|   [二叉树的层序遍历（102）](./src/05binary-tree/binary-tree-level-order-traversal.ts)    |  ⭐️⭐️   |
+|   [验证二叉搜索树（98）](./src/05binary-tree/validate-binary-search-tree.ts)    |  ⭐️⭐️   |
