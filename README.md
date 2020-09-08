@@ -54,3 +54,4 @@
 |   [二叉树的层序遍历（102）](./src/05binary-tree/binary-tree-level-order-traversal.ts)    |  ⭐️⭐️   |
 |   [验证二叉搜索树（98）](./src/05binary-tree/validate-binary-search-tree.ts)    |  ⭐️⭐️   |
 |   [二叉搜索树中的搜索（700）](./src/05binary-tree/search-in-a-binary-search-tree.ts)    |  ⭐️   |
+|   [删除二叉搜索树中的节点（450）](./src/05binary-tree/delete-node-in-a-bst.ts)    |  ⭐️⭐️   |
