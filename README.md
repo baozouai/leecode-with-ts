@@ -56,3 +56,4 @@
 |   [二叉搜索树中的搜索（700）](./src/05binary-tree/search-in-a-binary-search-tree.ts)    |  ⭐️   |
 |   [删除二叉搜索树中的节点（450）](./src/05binary-tree/delete-node-in-a-bst.ts)    |  ⭐️⭐️   |
 |   [平衡二叉树（110）](./src/05binary-tree/balanced-binary-tree.ts)    |  ⭐️   |
+|   [完全二叉树的节点个数（110）](./src/05binary-tree/count-complete-tree-nodes.ts)    |  ⭐️⭐️   |
