@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-11 08:35:33
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-11 08:52:01
+ * @LastEditTime: 2020-09-11 08:58:54
  */
 
 /**
@@ -60,6 +60,8 @@ function permute(nums: number[]): number[][] {
   }
   // 获取全排列
   getAllResltWithDFS(nums, []);
+  console.log(res);
   return res;
 };
 permute([1, 2, 3])
+permute([1, 2, 3, 5,])
