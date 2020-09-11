@@ -58,3 +58,9 @@
 |   [平衡二叉树（110）](./src/05binary-tree/balanced-binary-tree.ts)    |  ⭐️   |
 |   [完全二叉树的节点个数（110）](./src/05binary-tree/count-complete-tree-nodes.ts)    |  ⭐️⭐️   |
 |   [二叉树剪枝（841）](./src/05binary-tree/binary-tree-pruning.ts)    |  ⭐️⭐️   |
+
+## 回溯
+
+|                             标题                             | 难度 |
+| :----------------------------------------------------------: | :--: |
+|   [ 全排列（46）](./src/06trace-back/permutations.ts)    |  ⭐️⭐️   |
