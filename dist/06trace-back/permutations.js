@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-11 08:35:33
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-11 09:07:42
+ * @LastEditTime: 2020-09-11 08:58:54
  */
 /**
  * 示例1:
@@ -54,7 +54,6 @@ function permute(nums) {
                     temp.push(num);
                     getAllResltWithDFS(nums, temp);
                     temp.pop();
-                    console.log(temp)
                 }
             }
         }
@@ -66,4 +65,4 @@ function permute(nums) {
 }
 ;
 permute([1, 2, 3]);
-// permute([1, 2, 3, 5,]);
+permute([1, 2, 3, 5,]);
