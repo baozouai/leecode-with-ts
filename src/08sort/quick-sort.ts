@@ -3,29 +3,51 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 09:29:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-22 09:50:40
+ * @LastEditTime: 2020-09-22 12:06:52
  */
 
-function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1) {
+function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1): number[] {
   if (left < right) {
-    const partitionIndex = partition(arr, left, right);
+    // const partitionIndex = partition(arr, left, right);
+    const partitionIndex = partition1(arr, left, right);
     quickSort(arr, left, partitionIndex - 1);
     quickSort(arr, partitionIndex + 1, right);
   }
-}
-function partition(arr: number[], left: number, right: number):number {
+  return arr;
+};
+
+function partition(arr: number[], left: number, right: number): number {
   const pivot = left;
+  const pivotValue = arr[pivot];
   let index = left + 1;
   for (let i = index; i <= right; ++i) {
-    if (arr[i] < arr[pivot]) {
-      [arr[i], arr[index]] = [arr[index], arr[i]];
+    if (arr[i] < pivotValue) {
+      swap<number>(arr, index, i);
       ++index;
     }
   }
-  [arr[pivot], arr[index - 1]] = [arr[index - 1], arr[pivot]];
+  swap<number>(arr, pivot, index - 1);
   return index - 1;
 }
 
+function partition1(arr: number[], low: number, hight: number): number {
+  const pivot = arr[low];
+  while (low < hight) {
+    while (low < hight && arr[hight] > pivot) {
+      --hight;
+    }
+    arr[low] = arr[hight];
+    while (low < hight && arr[low] <= pivot) {
+      ++low;
+    }
+    arr[hight] = arr[low];
+  }
+  arr[low] = pivot;
+  return low;
+}
+function swap<T>(arr: T[], i: number, j: number) {
+  [arr[i], arr[j]] = [arr[j], arr[i]];
+}
 
 
-console.log(quickSort([4, -2, 1, 9, 5, 4, 9, 7, 11, 3]))
+console.log(quickSort([4, -2, 1, 9, 5, 4, 3, 9, 7, 11]))
