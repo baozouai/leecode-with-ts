@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-21 09:47:18
+ * @LastEditTime: 2020-09-22 09:51:47
 -->
 # 使用ts刷leecode
 
@@ -80,3 +80,10 @@
 |   [ 无重复字符的最长子串（3）](./src/07slide-window/longest-substring-without-repeating-characters.ts)    |  ⭐️⭐️   |
 |   [ 找到字符串中所有字母异位词（438）](./src/07slide-window/find-all-anagrams-in-a-string.ts)    |  ⭐️⭐️   |
 |   [ 剑指 Offer 57 - II. 和为s的连续正数序列（57）](./src/07slide-window/find-continuous-sequence-of-the-sum.ts)    |  ⭐️   |
+
+## 排序
+
+|                             标题                             | 难度 |
+| :----------------------------------------------------------: | :--: |
+|   [ 冒泡排序 ](./src/08sort/bubble-sort.ts)    |  ⭐️   |
+|   [ 快速排序 ](./src/08sort/quick-sort.ts)    |  ⭐️   |
