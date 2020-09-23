@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 09:29:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-22 12:06:52
+ * @LastEditTime: 2020-09-23 11:21:04
  */
 function quickSort(arr, left = 0, right = arr.length - 1) {
     if (left < right) {

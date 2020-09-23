@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-23 09:38:19
+ * @LastEditTime: 2020-09-23 11:03:55
 -->
 # 使用ts刷leecode
 
@@ -88,3 +88,4 @@
 |   [ 冒泡排序 ](./src/08sort/bubble-sort.ts)    |  ⭐️   |
 |   [ 快速排序 ](./src/08sort/quick-sort.ts)    |  ⭐️   |
 |   [ 归并排序 ](./src/08sort/merge-sort.ts)    |  ⭐️   |
+|   [ 堆排序 ](./src/08sort/heap-sort.ts)    |  ⭐️   |

@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 09:29:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-22 12:06:52
+ * @LastEditTime: 2020-09-23 11:21:04
  */
 
 function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1): number[] {
