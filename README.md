@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-23 11:03:55
+ * @LastEditTime: 2020-09-25 08:17:06
 -->
 # 使用ts刷leecode
 
@@ -11,7 +11,7 @@
 
 |                             标题                             | 难度 |
 | :----------------------------------------------------------: | :--: |
-|   [两个数组交集（350）](./src/01Array/two-array-intersection.ts)    |  ⭐️   |
+|   [两个数组交集（350）](./src/01Array/intersection-of-two-arrays-ii.ts)    |  ⭐️   |
 |    [最长公共前缀（14）](./src/01Array/longest-common-peifix.ts)    |  ⭐️   |
 | [买卖股票最佳时机II（122）](./src/01Array/best-time-to-buy-and-sell-stock-ii.ts) |  ⭐️   |
 | [翻转数组（189）](./src/01Array/rotate-array.ts) |  ⭐️   |
