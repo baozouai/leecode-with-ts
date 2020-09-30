@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-23 09:00:21
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-23 09:06:08
+ * @LastEditTime: 2020-09-30 14:56:36
  */
 
 /**
@@ -47,15 +47,11 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
   // 这里执行后下面就不用执行while (fastPointer && fastPointer.next && slowPointer)
   fastPointer = fastPointer.next
   // 快慢指针同时走，直到快指针指向尾部的下一个(即fastPointer => null)
-  // 这里感觉 （&& slowPointer）是不用加的，因为快指针都不为空，慢指针肯定不为空，但是不加leecode无法通过
-  while (fastPointer && slowPointer) {
+  while (fastPointer) {
     fastPointer = fastPointer.next;
-    slowPointer = slowPointer.next;
+    slowPointer = slowPointer!.next;
   }
-  // 这里感觉是是没必要加的，但是不加leecode无法通过
-  if (slowPointer && slowPointer.next) {
     // slowPointer走到要删除节点的前一个节点，则前一个节点的next指向删除节点的next，则释放掉删除节点
-    slowPointer.next = slowPointer.next.next;
-  }
+    slowPointer!.next = slowPointer!.next!.next;
   return head;
 };
