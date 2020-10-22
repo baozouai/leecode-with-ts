@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 09:22:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-25 08:17:06
+ * @LastEditTime: 2020-10-22 22:53:33
 -->
 # 使用ts刷leecode
 
@@ -27,7 +27,7 @@
 |   [删除链表的倒数第N个节点（19）](./src/02LinkList/remove-nth-node-from-end-of-list.ts)    |  ⭐️⭐️   |
 |   [合并两个有序链表（21）](./src/02LinkList/merge-two-sorted-lists.ts)    |  ⭐️   |
 |   [环形链表（141）](./src/02LinkList/linked-list-cycle.ts)    |  ⭐️   |
-|   [两数相加（2）](./src/02LinkList/linkeadd-two-numbers.ts)    |  ⭐️   |
+|   [两数相加（2）](./src/02LinkList/add-two-numbers.ts)    |  ⭐️   |
 
 ## 动态规划
 
@@ -45,13 +45,11 @@
 |                             标题                             | 难度 |
 | :----------------------------------------------------------: | :--: |
 |   [反转字符串（344）](./src/04String/reverse-string.ts)    |  ⭐️   |
-|   [第一个不重复的字符（387）](./src/04String/firstUniqChar.ts)    |  ⭐️   |
+|   [第一个不重复的字符（387）](./src/04String/first-unique-character-in-a-string.ts)    |  ⭐️   |
 |   [实现 strStr（28）](./src/04String/implement-strstr.ts)    |  ⭐️   |
 |   [验证回文串（125）](./src/04String/valid-palindrome.ts)    |  ⭐️   |
 |   [旋转字符串（796）](./src/04String/rotate-string.ts)    |  ⭐️   |
 |   [最后一个单词的长度（58）](./src/04String/length-of-last-word.ts)    |  ⭐️   |
-|   [二叉树的最大深度（104）](./src/04String/maximum-depth-of-binary-tree.ts)    |  ⭐️   |
-|   [二叉树的层序遍历（102）](./src/04String/binary-tree-level-order-traversal.ts)    |  ⭐️   |
 
 ## 二叉树
 
