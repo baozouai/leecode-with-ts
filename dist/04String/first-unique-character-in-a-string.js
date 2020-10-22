@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-01 20:37:45
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-01 20:40:24
+ * @LastEditTime: 2020-10-22 23:15:01
  */
 /**
  * s = "leetcode"
@@ -31,4 +31,30 @@ function firstUniqChar(s) {
     return -1;
 }
 ;
+// 第二张方法
+function firstUniqChar1(s) {
+    // 声明一个哈希表，存放s每个字符及其索引
+    const map = {};
+    const len = s.length;
+    for (let i = 0; i < len; ++i) {
+        map[s[i]] = i;
+    }
+    for (let i = 0; i < len; ++i) {
+        const character = s[i];
+        if (map[character] === i) {
+            return i;
+        }
+        else {
+            /**
+             * 这里防止出现'cc', 而导致{c: 1}
+             * 从而上面的map[character] === i为true
+             *  故z只要出现map[character] !== i 则map[character]设为-1
+             * */
+            map[character] = -1;
+        }
+    }
+    return -1;
+}
 console.log(firstUniqChar("leetcode")); // 0
+console.log(firstUniqChar1("leetcode")); // 0
+console.log(firstUniqChar1("cc")); // -1
