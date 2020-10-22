@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-06 12:08:18
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-06 12:15:03
+ * @LastEditTime: 2020-10-22 23:42:19
  */
 
 /**
@@ -40,24 +40,22 @@ function levelOrder(root: TreeNode | null): number[][] {
   const queue: TreeNode[] = [root];
   // 按 层序遍历 得到的节点值
   const res: number[][] = [];
+  let queueLength;
   // 队列不为空
-  while (queue.length) {
-    // 获取队列长度
-    const queueLength = queue.length;
+  // 获取队列长度
+  while (queueLength = queue.length) {
     // 当前层级数组
     const currentArr: number[] = [];
     // 遍历队列
     for (let i = 0; i < queueLength; ++i) {
-      const node: TreeNode | undefined = queue.shift();
-      if (node) {
-        // 将该层节点值放入数组
-        currentArr.push(node.val);
-      }
+      const node: TreeNode = queue.shift()!;
+      // 将该层节点值放入数组
+      currentArr.push(node.val);
       // 如果有左右子节点则放入队列
-      if (node && node.left) {
+      if (node.left) {
         queue.push(node.left);
       }
-      if (node && node.right) {
+      if (node.right) {
         queue.push(node.right);
       }
     }
@@ -77,7 +75,7 @@ function levelOrder1(root: TreeNode | null): number[][] {
     if (res.length === level) {
       res.push([root.val]);
     } else {
-      // 否则该层数据以及创建，往该层数据push
+      // 否则该层数据已经创建，往该层数据push
       res[level].push(root.val);
     }
     // 处理左右子节点
