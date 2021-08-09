@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-07 09:21:03
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-07 09:25:28
+ * @LastEditTime: 2020-10-23 10:42:39
  */
 
 /**
@@ -36,26 +36,26 @@
  * @return {boolean} 节点值等于给定值，以该节点为根的子树
  */
 function searchBST(root: TreeNode | null, val: number): TreeNode | null {
-    if (root === null) {
-        return null;
-    }
-    // 找到值则返回
-    if (root.val === val) {
+    /**
+     *  1. 根节点为null
+     *  2. 根节点不为null且值等于要查找的值
+     *     则返回root
+     */
+    if (root === null || root.val === val) {
         return root;
     }
     // 递归查找左右子树
-    return root.val > val ? searchBST(root.left, val): searchBST(root.right, val);
+    return searchBST(root[root.val > val ? 'left' : 'right'], val);
 };
 function searchBST1(root: TreeNode | null, val: number): TreeNode | null {
-  while (root) {
-      // 比较该节点以及左右子节点
-      if (root.val === val) {
-          return root;
-      } else if (root.val > val) {
-          root = root.left;
-      } else {
-          root = root.right;
-      }
-  }
-  return null;
+    let tempRoot = root;
+    while (tempRoot) {
+        const rootVal = tempRoot.val;
+        // 比较该节点以及左右子节点
+        if (rootVal === val) {
+            return tempRoot;
+        }
+        tempRoot = tempRoot[rootVal > val ? 'left' : 'right'];
+    }
+    return null;
 };

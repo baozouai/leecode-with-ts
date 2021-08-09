@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 09:29:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-23 11:21:04
+ * @LastEditTime: 2020-10-23 13:03:18
  */
 
 function quickSort(arr: number[], left: number = 0, right: number = arr.length - 1): number[] {
@@ -17,16 +17,15 @@ function quickSort(arr: number[], left: number = 0, right: number = arr.length -
 };
 
 function partition(arr: number[], left: number, right: number): number {
-  const pivot = left;
-  const pivotValue = arr[pivot];
+  const pivotValue = arr[left];
   let index = left + 1;
   for (let i = index; i <= right; ++i) {
     if (arr[i] < pivotValue) {
-      swap<number>(arr, index, i);
+      swap(arr, index, i);
       ++index;
     }
   }
-  swap<number>(arr, pivot, index - 1);
+  swap(arr, left, index - 1);
   return index - 1;
 }
 
@@ -45,7 +44,7 @@ function partition1(arr: number[], low: number, hight: number): number {
   arr[low] = pivot;
   return low;
 }
-function swap<T>(arr: T[], i: number, j: number) {
+function swap<T = number>(arr: T[], i: number, j: number) {
   [arr[i], arr[j]] = [arr[j], arr[i]];
 }
 

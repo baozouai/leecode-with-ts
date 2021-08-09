@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-11 08:35:33
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-11 08:58:54
+ * @LastEditTime: 2020-10-23 11:13:58
  */
 
 /**
@@ -25,8 +25,8 @@
  */
 
 /**
- * @description: 给定一个 没有重复 数字的序列，返回其所有可能的全排列
- * @param {number[]} nums 没有重复 数字的序列
+ * @description: 给定一个没有重复数字的序列，返回其所有可能的全排列
+ * @param {number[]} nums 没有重复数字的序列
  * @return {number[][]} 所有可能的全排列
  */
 function permute(nums: number[]): number[][] {
@@ -34,10 +34,10 @@ function permute(nums: number[]): number[][] {
   const res: number[][] = [];
   /**
    * @description: 获取所有全排列
-   * @param {number[]} nums 没有重复 数字的序列
+   * @param {number[]} nums 没有重复数字的序列
    * @param {number[]}  temp 任一种排列
    */
-  function getAllResltWithDFS(nums: number[], temp: number[]) {
+  function getAllResltWithDFS(temp: number[]) {
     console.log(`res = ${JSON.stringify(res)}, temp = ${JSON.stringify(temp)}`);
     // 当temp数量跟nums数量相等，则获得了一次排列
     if (temp.length === nums.length) {
@@ -47,19 +47,19 @@ function permute(nums: number[]): number[][] {
       // 遍历每个元素
       for (let num of nums) {
         /**
-         * 如果不包含temp该元素 则将该元素放入temp，再递归
+         * 如果temp不包含该元素 则将该元素放入temp，再递归
          * 递归完则去掉该元素
          */
         if (!(~temp.indexOf(num))) {
           temp.push(num);
-          getAllResltWithDFS(nums, temp);
+          getAllResltWithDFS(temp);
           temp.pop();
         }
       }
     }
   }
   // 获取全排列
-  getAllResltWithDFS(nums, []);
+  getAllResltWithDFS([]);
   console.log(res);
   return res;
 };

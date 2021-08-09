@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-07 08:41:52
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-07 08:46:56
+ * @LastEditTime: 2020-10-23 11:01:56
  */
 
 /**
@@ -55,14 +55,16 @@ function isBST(root:TreeNode | null, min:number, max:number):boolean {
   if (root === null) {
       return true;
   }
+  // 获取根节点值
+  const rootVal = root.val;
   /**
    *  1.如果最小值大于等于根节点的值
    *  2.如果最大值小于等于根节点的值
-   *  则不是二叉搜索树
+   *    则不是二叉搜索树
    */
-  if (min >= root.val || max <= root.val) {
+  if (min >= rootVal || max <= rootVal) {
       return false;
   }
   // 递归左右子树
-  return isBST(root.left, min, root.val) && isBST(root.right, root.val, max);
+  return isBST(root.left, min, rootVal) && isBST(root.right, rootVal, max);
 }

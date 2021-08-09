@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-08 21:54:04
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-08 21:59:00
+ * @LastEditTime: 2020-10-23 10:24:04
  */
 
 /**
@@ -57,7 +57,7 @@ function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
   if (root === null) {
       return root;
   }
-  // 如果key不等于改节点，则根据key与改节点值大小比较，从左右子树找
+  // 如果key不等于该节点，则根据key与该节点值大小比较，从左右子树找
   if (key < root.val) {
       root.left = deleteNode(root.left, key);
       return root;
@@ -66,7 +66,7 @@ function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
       root.right = deleteNode(root.right, key);
       return root;
   }
-  // 否则改节点即为要删除的节点
+  // 否则该节点即为要删除的节点
   // 如果该节点左子树为空，则返回其右节点
   if (root.left === null) {
       return root.right;
@@ -76,16 +76,16 @@ function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
       return root.left;
   }
   /**
-   *  否则找到1.其左子树的最大值，
+   *  否则找到 1.其左子树的最大值，
    *     或者 2.右子树的最小值
-   *  这里找采取第二种情况
+   *  这里采取第二种情况
    */
   let miniNode: TreeNode = root.right;
   // 一直找右节点的左节点，最终就是右子树的最小值
   while (miniNode.left) {
       miniNode = miniNode.left;
   }
-  // 将右子树的最小值赋给改节点root
+  // 将右子树的最小值赋给该节点root
   root.val = miniNode.val;
   // 剔除miniNode
   root.right = deleteMiniNode(root.right);

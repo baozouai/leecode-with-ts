@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 08:39:12
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-22 09:50:32
+ * @LastEditTime: 2020-10-23 13:03:32
  */
 function bubbleSort(arr) {
     const len = arr.length;
@@ -13,7 +13,7 @@ function bubbleSort(arr) {
         for (let j = 0; j < len - 1 - i; ++j) {
             if (arr[j] > arr[j + 1]) {
                 flag = true;
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                swap(arr, j, j + 1);
             }
         }
         if (!flag) {

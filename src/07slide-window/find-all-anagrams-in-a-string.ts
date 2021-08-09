@@ -3,41 +3,48 @@
  * @Author: Moriaty
  * @Date: 2020-09-20 23:41:25
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-20 23:59:37
- */
-/*
- * @Description: 无重复字符的最长子串
- * @Author: Moriaty
- * @Date: 2020-09-15 08:26:15
- * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-20 23:59:29
+ * @LastEditTime: 2020-10-23 12:31:35
  */
 
 /**
 * 示例 1:
-*
-*   输入: "abcabcbb"
-*   输出: 3
-*   解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+*   
+*   输入:
+*   s: "cbaebabacd" p: "abc"
+*   
+*   输出:
+*   [0, 6]
+*   
+*   解释:
+*   起始索引等于 0 的子串是 "cba", 它是 "abc" 的字母异位词。
+*   起始索引等于 6 的子串是 "bac", 它是 "abc" 的字母异位词。
 * 示例 2:
-*
-*   输入: "bbbbb"
-*   输出: 1
-*   解释: 因为无重复字符的最长子串是 "b"，所以其长度为 1。
-* 示例 3:
-*
-*   输入: "pwwkew"
-*   输出: 3
-*   解释: 因为无重复字符的最长子串是 "wke"，所以其长度为 3。
-*      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
-*
-* 来源：力扣（LeetCode）
-* 链接：https://leetcode-cn.com/problems/longest-substring-without-repeating-characters
+*   
+*   输入:
+*   s: "abab" p: "ab"
+*   
+*   输出:
+*   [0, 1, 2]
+*   
+*   解释:
+*   起始索引等于 0 的子串是 "ab", 它是 "ab" 的字母异位词。
+*   起始索引等于 1 的子串是 "ba", 它是 "ab" 的字母异位词。
+*   起始索引等于 2 的子串是 "ab", 它是 "ab" 的字母异位词。
+*   
+*   来源：力扣（LeetCode）
+*   链接：https://leetcode-cn.com/problems/find-all-anagrams-in-a-string
 */
 /**
- * @description: 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
+ * @description: 给定一个字符串 s 和一个非空字符串 p，找到 s 中所有是 p 的字母异位词的子串，
+ *               返回这些子串的起始索引。
+ *               字符串只包含小写英文字母，并且字符串 s 和 p 的长度都不超过 20100。
+ *               
+ *               说明：
+ *               1. 字母异位词指字母相同，但排列不同的字符串。
+ *               2. 不考虑答案输出的顺序
  * @param {string} s 字符串
- * @return {number} 字符串
+ * @param {string} p 非空字符串
+ * @return {number[]} s 中所有是 p 的字母异位词的子串的起始索引
  */
 function findAnagrams(s: string, p: string): number[] {
   const indexArr: number[] = [];

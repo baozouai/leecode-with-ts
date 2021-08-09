@@ -44,7 +44,7 @@ function pruneTree(root: rootType): rootType {
     return deleteEmptyTree(root);
 };
 /**
- * @description: 如果节点值为0，其左右子树为null，则去掉改节点
+ * @description: 如果节点值为0，其左右子树为null，则去掉该节点
  */
 function deleteEmptyTree(root: rootType): rootType {
     if (root === null) {

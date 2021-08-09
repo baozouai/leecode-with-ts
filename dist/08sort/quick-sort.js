@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-22 09:29:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-23 11:21:04
+ * @LastEditTime: 2020-10-23 13:03:18
  */
 function quickSort(arr, left = 0, right = arr.length - 1) {
     if (left < right) {
@@ -17,8 +17,7 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
 }
 ;
 function partition(arr, left, right) {
-    const pivot = left;
-    const pivotValue = arr[pivot];
+    const pivotValue = arr[left];
     let index = left + 1;
     for (let i = index; i <= right; ++i) {
         if (arr[i] < pivotValue) {
@@ -26,7 +25,7 @@ function partition(arr, left, right) {
             ++index;
         }
     }
-    swap(arr, pivot, index - 1);
+    swap(arr, left, index - 1);
     return index - 1;
 }
 function partition1(arr, low, hight) {
