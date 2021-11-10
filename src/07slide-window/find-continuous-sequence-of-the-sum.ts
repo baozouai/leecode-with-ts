@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-20 23:41:25
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-21 09:46:26
+ * @LastEditTime: 2021-11-08 19:44:42
  */
 
 /**
@@ -28,14 +28,14 @@
 function findContinuousSequence(target: number): number[][] {
   // 声明序列数组
   const result: number[][] = [];
-  // 声明1-target - 1的正整数数组
+  // 声明1 ~ target - 1的正整数数组
   const intArr: number[] = [];
   for (let i = 1; i < target; ++i) {
     intArr.push(i);
   }
   // 初始化窗口值
   let windowValue = 0;
-  // 由于target值必定小于其(中值+中值 + 1）中值 = target / 2
+  // 由于target值必定小于其 中值及 中值 + 1，其中中值 = target / 2
   let i = 1, j = 1;
   while (i < target / 2) {
     // 如果窗口值小于目标值 移动窗口右侧

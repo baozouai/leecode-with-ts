@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-12 09:05:14
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-12 09:41:26
+ * @LastEditTime: 2021-08-10 12:59:08
  */
 
  /**
@@ -42,7 +42,7 @@ function maxSlidingWindow(nums: number[], k: number): number[] {
     // 借助双头队列
     const queue:number[] = [];
     // 遍历nums
-    nums.forEach((num:number, index: number, self: number[]) => {
+    nums.forEach((num, index, self) => {
       // 从第二个元素开始，将队列中元素小于当前元素的剔除
       while (index > 0 && queue.length && num > queue[queue.length - 1]) {
         queue.pop();

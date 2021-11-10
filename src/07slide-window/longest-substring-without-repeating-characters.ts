@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-15 08:26:15
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-15 09:10:27
+ * @LastEditTime: 2021-09-28 14:57:53
  */
 
 /**
@@ -49,7 +49,7 @@ function lengthOfLongestSubstring(s: string): number {
       // 取最大值
       maxSubLengh = Math.max(maxSubLengh, right - left);
     } else {
-      // 否则将改元素及其左侧元素剔除出窗口，缩小窗口
+      // 否则将该元素及其左侧元素剔除出窗口，缩小窗口
       windows = windows.slice(index + 1);
       // 移动左指针
       left += index + 1;
@@ -62,7 +62,7 @@ function lengthOfLongestSubstring1(s: string): number {
   let maxSubLengh = 0, left = 0, right = 0;
   const length = s.length;
   // 声明map用于存放s每一个字符 s[index] => index + 1
-  const map: { [key: string]: number } = {};
+  const map: Record<string, number> = {};
   while (right < length) {
     const character:string = s[right];
     // 如果元素已在map中，则left跳到该元素的下一个元素
@@ -78,5 +78,5 @@ function lengthOfLongestSubstring1(s: string): number {
   return maxSubLengh;
 };
 console.log(lengthOfLongestSubstring('abcabcbb'));
-console.log(lengthOfLongestSubstring('"bbbbb'));
+console.log(lengthOfLongestSubstring('bbbbb'));
 console.log(lengthOfLongestSubstring('pwwkew'));

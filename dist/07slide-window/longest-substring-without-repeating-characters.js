@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-15 08:26:15
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-15 09:10:27
+ * @LastEditTime: 2021-09-29 11:22:39
  */
 /**
 * 示例 1:
@@ -80,5 +80,5 @@ function lengthOfLongestSubstring1(s) {
 }
 ;
 console.log(lengthOfLongestSubstring('abcabcbb'));
-console.log(lengthOfLongestSubstring('"bbbbb'));
+console.log(lengthOfLongestSubstring('bbbbb'));
 console.log(lengthOfLongestSubstring('pwwkew'));

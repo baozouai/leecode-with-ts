@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-20 23:41:25
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-10-23 12:31:35
+ * @LastEditTime: 2021-10-09 09:39:55
  */
 
 /**
@@ -52,17 +52,17 @@ function findAnagrams(s: string, p: string): number[] {
   // 声明窗口数组pArr和目标串数组sArr
   const pArr: number[] = Array(26).fill(0);
   const sArr: number[] = Array(26).fill(0);
-  const aUnicode:number = 'a'.charCodeAt(0);
+  const aUnicode: number = 'a'.charCodeAt(0);
   // 先将两个数组初始化p.length
   for (let i = 0; i < p.length; ++i) {
-      pArr[p[i].charCodeAt(0) - aUnicode]++;
-      sArr[s[i].charCodeAt(0) - aUnicode]++;
+    pArr[p[i].charCodeAt(0) - aUnicode]++;
+    sArr[s[i].charCodeAt(0) - aUnicode]++;
   }
   let i = 0, j = p.length;
   while (j < s.length) {
-       // 如果两个数组元素相同，则记录索引
-       if (pArr.join() === sArr.join()) {
-        indexArr.push(i);
+    // 如果两个数组元素相同，则记录索引
+    if (pArr.join() === sArr.join()) {
+      indexArr.push(i);
     }
     // 窗口最左侧元素即将移除，将对应元素数量--
     sArr[s[i++].charCodeAt(0) - aUnicode]--;
@@ -70,7 +70,7 @@ function findAnagrams(s: string, p: string): number[] {
     sArr[s[j++].charCodeAt(0) - aUnicode]++;
   }
   if (pArr.join() === sArr.join()) {
-      indexArr.push(i);
+    indexArr.push(i);
   }
   return indexArr;
 };

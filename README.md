@@ -1,10 +1,3 @@
-<!--
- * @Description: 
- * @Author: Moriaty
- * @Date: 2020-08-18 09:22:14
- * @Last modified by: Moriaty
- * @LastEditTime: 2020-10-22 22:53:33
--->
 # 使用ts刷leecode
 
 ## 数组
