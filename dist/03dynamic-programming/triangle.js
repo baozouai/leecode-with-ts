@@ -40,38 +40,34 @@ function minimumTotal(triangle) {
             break;
     }
     // 创建动态数组
-    let dp = [triangle[0][0],];
+    const dp = [triangle[0]];
     // 从第二行开始遍历
     for (let i = 1; i < rows; ++i) {
-        // 新动态数组置空
-        const newDp = [];
         // 遍历第i行的每个元素
         for (let j = 0; j < triangle[i].length; ++j) {
             /**
              * 第i行每个元素最小路径和为:
-             *  1.j === 0, 只能取上一行第0个元素 即triangle[i][j] + dp[0];
+             *  1.j === 0, 只能取上一行第0个元素 即triangle[i][j] + dp[i - 1][j];
              *  2.j === i, 只能取上一行第j - 1个元素 即triangle[i][j] + dp[j - 1];
              *  3.other, triangle[i][j] + min(dp[j - 1], dp[j]);
              */
             let preNum;
             switch (j) {
                 case 0:
-                    preNum = dp[j];
+                    preNum = dp[i - 1][j];
                     break;
                 case i:
-                    preNum = dp[j - 1];
+                    preNum = dp[i - 1][j - 1];
                     break;
                 default:
-                    preNum = Math.min(...dp.slice(j - 1, j + 1));
+                    preNum = Math.min(...dp[i - 1].slice(j - 1, j + 1));
                     break;
             }
-            newDp.push(triangle[i][j] + preNum);
+            dp[i][j] = triangle[i][j] + preNum;
         }
-        // 将新的代替旧的
-        dp = [...newDp];
     }
     // 获取最小值
-    return Math.min(...dp);
+    return Math.min.apply(null, dp[dp.length - 1]);
 }
 ;
 console.log(minimumTotal([

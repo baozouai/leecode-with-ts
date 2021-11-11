@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-31 09:30:41
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 09:37:30
+ * @LastEditTime: 2021-11-11 12:57:53
  */
 
 /**
@@ -39,5 +39,5 @@ function lengthOfLIS(nums: number[]): number {
       }
   }
   // 返回最长上升子序列的长度
-  return Math.max(...dp);
+  return Math.max.apply(null, dp);
 };

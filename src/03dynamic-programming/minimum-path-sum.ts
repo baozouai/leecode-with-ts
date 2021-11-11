@@ -3,7 +3,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-31 22:13:36
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 22:18:58
+ * @LastEditTime: 2021-11-11 15:23:35
  */
 
 /**
@@ -32,12 +32,11 @@ function minPathSum(grid: number[][]): number {
   if (rows === 0) {
       return 0;
   }
-  const dp: number[][] = Array(rows).fill([]);
-  // 初始条件
-  dp[0][0] = grid[0][0];
+  const dp: number[][] = Array.from({length: rows}).map(() => []);
   const columns = grid[0].length;
   for (let i = 0; i < rows; ++i) {
       for (let j = 0; j < columns; ++j) {
+        dp[i][j] = grid[i][j]
         // 第一行的dp[0][j] = 第j个grid元素和前一个最小路径
           if (i === 0 && j !== 0) {
               dp[0][j] = grid[i][j] + dp[i][j - 1];

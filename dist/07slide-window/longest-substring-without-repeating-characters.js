@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-15 08:26:15
  * @Last modified by: Moriaty
- * @LastEditTime: 2021-09-29 11:22:39
+ * @LastEditTime: 2021-09-28 14:57:53
  */
 /**
 * 示例 1:
@@ -49,7 +49,7 @@ function lengthOfLongestSubstring(s) {
             maxSubLengh = Math.max(maxSubLengh, right - left);
         }
         else {
-            // 否则将改元素及其左侧元素剔除出窗口，缩小窗口
+            // 否则将该元素及其左侧元素剔除出窗口，缩小窗口
             windows = windows.slice(index + 1);
             // 移动左指针
             left += index + 1;

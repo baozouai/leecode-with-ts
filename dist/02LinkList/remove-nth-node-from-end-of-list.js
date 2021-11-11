@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-23 09:00:21
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-30 14:56:36
+ * @LastEditTime: 2021-11-10 13:05:02
  */
 /**
  * 示例 1:
@@ -37,7 +37,7 @@ function removeNthFromEnd(head, n) {
         fastPointer = fastPointer.next;
         --n;
     }
-    // 避免输入[1],n=1,上面while循环使fastPointer走到尾部的下一个null，则输出得为head.next,即null
+    // 避免输入[1],n=1,上面while循环使fastPointer走到尾部的下一个null，则输出为head.next,即null
     if (!fastPointer)
         return head.next;
     // 这里执行后下面就不用执行while (fastPointer && fastPointer.next && slowPointer)

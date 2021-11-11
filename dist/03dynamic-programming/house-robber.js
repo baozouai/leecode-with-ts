@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-09-01 13:53:47
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-09-01 14:01:42
+ * @LastEditTime: 2021-11-11 15:36:36
  */
 /**
  * 给定三角形：
@@ -47,7 +47,7 @@ function rob(nums) {
         dp[i] = Math.max(dp[i - 2] + nums[i], dp[i - 1]);
     }
     // 返回最大值
-    return Math.max(...dp);
+    return dp[length - 1];
 }
 ;
 console.log(rob([1, 2, 3, 1])); // 4

@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-18 08:39:32
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-19 09:16:02
+ * @LastEditTime: 2021-11-09 13:02:22
  */
 /**
  * example1:
@@ -15,6 +15,9 @@
  *   输出: ""
  *  说明:
  *   所有输入只包含小写字母 a-z
+ *
+ *  来源：力扣（LeetCode）
+ *  链接：https://leetcode-cn.com/problems/longest-common-prefix
  */
 /**
  * @description:
