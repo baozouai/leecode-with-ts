@@ -4,7 +4,7 @@
  * @Author: Moriaty
  * @Date: 2020-08-28 08:57:04
  * @Last modified by: Moriaty
- * @LastEditTime: 2020-08-31 08:43:34
+ * @LastEditTime: 2021-11-11 11:50:21
  */
 
 /**
@@ -30,5 +30,5 @@ function maxSubArray(nums: number[]): number {
     maxSubSumArr.push(Math.max(nums[i], nums[i] + maxSubSumArr[i - 1]));
   }
   // 返回最大子序和
-  return Math.max(...maxSubSumArr);
+  return Math.max.apply(null, maxSubSumArr);
 };
